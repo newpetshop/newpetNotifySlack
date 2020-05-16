@@ -1,0 +1,21 @@
+name: Deploys code into AWS Lambda
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Deploy
+      uses: appleboy/lambda-action@v0.0.4
+      with:
+        function_name: ${{ secrets.AWS_LAMBDA_NAME }}
+        aws_region: ${{ secrets.AWS_REGION }}
+        aws_access_key_id: ${{ secrets.AWS_KEY_ID }}
+        aws_secret_access_key: ${{ secrets.AWS_KEY_SECRET }}
+        source: src/index.js
