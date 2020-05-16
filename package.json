@@ -1,0 +1,19 @@
+{
+  "name": "s3-slack",
+  "version": "1.0.0",
+  "description": "Sends notification to Slack every time a new file is uploaded on AWS S3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunogeronimo/s3-slack.git"
+  },
+  "author": "Bruno Geronimo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunogeronimo/s3-slack/issues"
+  },
+  "homepage": "https://github.com/brunogeronimo/s3-slack#readme"
+}
